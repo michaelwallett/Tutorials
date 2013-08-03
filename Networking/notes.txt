@@ -1,0 +1,55 @@
+To get detailed network info:
+	ipconfig /all | more
+
+DHCP servers hand out IP addresses.
+IPv4 has an address space of 2^32.
+IPv6 has an address space of 2^128.
+
+To find the IP for a domain name use nslookup:
+	nslookup www.google.com
+	nslookup
+		google.com (domain name to lookup)
+	nslookup
+		server 129.65.16.254 (IP for a DNS)
+		google.com (domain name to lookup)
+
+To see all of the cached DNS records:
+	ipconfig /displaydns
+
+By default nslookup will show A record types, those that turn a domain name into an IP.
+
+To lookup NS records:
+	nslookup
+		set type=NS
+		www.google.com
+
+To lookup MX (Mail Exchange) records:
+	nslookup
+		set type=NS
+		www.google.com
+
+To lookup CNAME (alias) records:
+	nslookup
+		set type=CNAME
+		www.google.com
+
+Routers route traffic between subnets.
+
+To see all the router hops traffic has to take to get from A to B:
+	tracert www.google.com
+	pathping www.google.com
+
+Subnets are defined by a combination of the IP and subnet mask.
+Subnet masks have 4 octets (8 bits each):
+	255.255.255.000 (24 bit subnet mask)
+The route table determines how a computer can reach other sub networks:
+	route print
+
+Network Address Translation (NAT) is used to translate between puplic and private IP addresses.
+
+To test port connectivity:
+	telnet www.google.com 80
+	nmap -v www.google.com
+
+Which ports are listening? And by which process? 
+	netstat -ano
