@@ -1,0 +1,22 @@
+Change to home directory (~):
+	cd
+
+Manual pages:
+	man ls
+		q (exit)
+		b (back)
+		space (down)
+		/use a long listing (search)
+
+Print working directory:
+	pwd
+
+Hidden files start with a full stop, to see them:
+	ls -a
+
+Special files:
+	. (current directory)
+	.. (parent directory)
+
+History:
+	Use up and down cursors, or Ctrl-p and Ctrl-n. 
