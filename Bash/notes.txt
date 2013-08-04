@@ -83,6 +83,56 @@ File names:
 List files recursively:
 	ls -R
 
+List files that match a prefix:
+	ls a* (matches files that start with a)
+
+Brace expansion:
+	Brace expansion comes before wildcard expansion.
+	touch {a,b,c}.txt
+		= touch a.txt b.txt c.txt
+	touch file-{1..10}.txt
+		= touch file-1.txt file-2.txt ...
+	mv *{txt,jpg} destinationdirectoryname
+		= mv *txt *jpg destinationdirectoryname
+
+Save output of a command:
+	ls > filename
+	cat > filename 
+	echo "hello world" > filename
+
+Command substitution:
+	echo "hello, $(whoami)"
+	echo "The date is $(date)"
+	echo "The host name is `hostname`" (old style)
+
+See the first few lines in output:
+	ls | head
+
+See the last few lines in output:
+	ls | tail
+
+See only the first line in output:
+	ls | head -n1
+
+Append output of a command using >>.
+
+Jump forward in line using Alt-f.
+Jump backward in line using Alt-b.
+Move to start of line using Ctrl-a.
+Move to end of line using Ctrl-e.
+Move forward using Ctrl-f.
+Move backward using Ctrl-b.
+Delete a char using Ctrl-d.
+Delete word using Alt-d.
+Delete a char backward using Ctrl-h.
+Delete a word backward using Ctrl-w.
+Delete rest of line using Ctrl-k.
+Delete from start of line using Ctrl-u.
+Search history using Ctrl-r.
+
+Vim:
+	vimtutor
+ 
 Mac OS:
 	Open non-text files:
 		open filename
@@ -90,3 +140,7 @@ Mac OS:
 
 	File names:
 		File names are not case sensitive.
+
+	Editors:
+		nano filename
+		emacs filename
