@@ -19,4 +19,74 @@ Special files:
 	.. (parent directory)
 
 History:
-	Use up and down cursors, or Ctrl-p and Ctrl-n. 
+	Use up and down cursors, or Ctrl-p and Ctrl-n.
+
+Reading the contents of a file:
+	cat filename
+		If you cat a binary file it may mess up your terminal, if so use the reset command.
+	less filename
+		q (exit)
+		b (back)
+		space (down)
+		/use a long listing (search)
+
+See file types:
+	file filename
+	file *
+
+Remove file:
+	rm filename
+
+Make file:
+	touch filename
+		If the file already exists it's access date gets updated.
+	cat > filename
+		content...
+		Ctrl-d (save & exit)
+
+Rename file:
+	mv filename1 filename2
+
+Move file:
+	mv filename destinationdirectoryname
+	mv filename1 filename2 ... destinationdirectoryname
+
+Copy file:
+	cp filename destinationdirectoryname
+	cp filename .
+	cp filename destinationdirectoryname/filename
+	cp filename destinationdirectoryname/newfilename
+	cp * destinationdirectoryname
+
+Copy directory:
+	cp -R sourcedirectoryname destinationdirectoryname  
+
+Make directory:
+	mkdir directoryname
+	mkdir directoryname1 directoryname2 ...
+
+Remove directory:
+	rmdir directoryname (will only remove empty directories)
+	rm -r directoryname
+
+Prompt when performing dangerous commands:
+	cp -i
+	mv -i
+	rm -i
+
+File names:
+	Can be called anything exept /.
+	Hidden files start with a full stop.
+	File names are case sensitive.
+	Extensions are optional.
+
+List files recursively:
+	ls -R
+
+Mac OS:
+	Open non-text files:
+		open filename
+		open . (opens current directory)
+
+	File names:
+		File names are not case sensitive.
