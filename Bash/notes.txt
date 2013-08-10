@@ -100,6 +100,8 @@ Save output of a command:
 	cat > filename 
 	echo "hello world" > filename
 
+Append output of a command using >>.
+
 Command substitution:
 	echo "hello, $(whoami)"
 	echo "The date is $(date)"
@@ -114,7 +116,63 @@ See the last few lines in output:
 See only the first line in output:
 	ls | head -n1
 
-Append output of a command using >>.
+Background jobs:
+	Bring a command to the foreground:
+		fg %1 (job id is 1)
+	Send a command to the background:
+		bg %1 (job id is 1)
+	To stop a background job messing up your screen, write output to a file:
+		./command > filename &
+	See all jobs for current shell:
+		jobs
+	Kill a running job by id:
+		kill %1 (job id is 1)
+	Kill a running job by process id:
+		kill 4396
+	Hard kill:
+		kill -KILL %1
+
+Get a list of all running processes:
+	Linux:
+		ps -e (get processes running for everyone)
+	Mac OS:
+		ps ax
+
+To see task manager equivalent:
+	top
+
+Aliases:
+	To see a list of configured aliases:
+		alias
+	Add alias:
+		alias ls='ls --color=auto'
+	Remove alias:
+		unalias ls
+	Remove all aliases:
+		unalias -a
+	Run command without alias:
+		\ls
+
+Customisation:
+	~/.bashrc
+		Read and executed everytime bash starts for a non login session.
+	~/.profile
+		Read and executed everytime bash starts for a login session, using ssh. Typically .profile just runs .bashrc.
+	Mac OS:
+		These files do not exist by default. The terminal starts as a login shell, so only .profile is required.
+
+Environment variables:
+	Prompt: $PS1
+	Home directory: $HOME
+	Directories containing executables: $PATH
+	Set a variable value:
+		PS1='new value'
+	Get a list of all variables:
+		env
+	If a variable is needed in a subprocess it must be exported:
+		export EDITOR='nano'
+
+Command directory must be listed in $PATH for it to be executed, otherwise use the ./command.
 
 Jump forward in line using Alt-f.
 Jump backward in line using Alt-b.
@@ -129,6 +187,7 @@ Delete a word backward using Ctrl-w.
 Delete rest of line using Ctrl-k.
 Delete from start of line using Ctrl-u.
 Search history using Ctrl-r.
+Suspend a running job Ctrl-z.
 
 Vim:
 	vimtutor
