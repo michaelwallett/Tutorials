@@ -77,7 +77,7 @@
       <file leaf-file-name="index.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="128" selection-start="116" selection-end="116" vertical-scroll-proportion="0.2084063">
+            <state line="7" column="72" selection-start="116" selection-end="116" vertical-scroll-proportion="0.2084063">
               <folding />
             </state>
           </provider>
@@ -467,7 +467,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="128" selection-start="116" selection-end="116" vertical-scroll-proportion="0.2084063">
+        <state line="7" column="72" selection-start="116" selection-end="116" vertical-scroll-proportion="0.2084063">
           <folding />
         </state>
       </provider>
